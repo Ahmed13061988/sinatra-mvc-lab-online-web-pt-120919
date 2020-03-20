@@ -2,7 +2,7 @@ require 'pry'
 class PigLatinizer
   
    def piglatinize(user_phrase)
-    if user_phrase.split(" ").lenght == 1 
+    if user_phrase.split(" ").length == 1 
       piglatinize(user_phrase)
     else 
       to_pig_latin(user_phrase)
