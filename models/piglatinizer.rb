@@ -10,6 +10,7 @@ class PigLatinizer
   # end 
 
   def piglatinize(user_phrase)
+    if user_phrase.split(" ").length == 1 
     @new_word = user_phrase.split("")
     vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
     if vowels.include?(@new_word[0])
@@ -18,6 +19,8 @@ class PigLatinizer
       latinized_word = begins_with_consonant.join("")
     end
     latinized_word
+  else 
+    
   end
 
   def to_pig_latin(sentence)
