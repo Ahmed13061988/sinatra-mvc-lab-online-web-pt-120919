@@ -20,7 +20,11 @@ class PigLatinizer
     end
     latinized_word
   else 
-    
+     words_in_sentence = user_phrase.split(" ")
+     words_in_sentence.collect do |word|
+      self.piglatinize(word)
+    end.join(" ")
+  end
   end
 
   def to_pig_latin(sentence)
